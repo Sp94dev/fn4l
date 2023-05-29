@@ -1,0 +1,10 @@
+.button {
+	height: 36px;
+	width: auto;
+	cursor: pointer;
+	transition: var(--default-transition);
+}
+.button:hover {
+	filter: brightness(60%);
+	transition: var(--default-transition);
+}

@@ -1,0 +1,17 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.image {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	max-height: calc(100vh / 3);
+	width: auto;
+}
+.title__wrapper {
+}
+.title {
+	white-space: nowrap;
+	border-bottom: 1px solid yellow;
+}
