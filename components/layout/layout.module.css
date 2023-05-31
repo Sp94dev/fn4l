@@ -1,5 +1,9 @@
 .container {
-	padding: 30px 20px;
+	height: 100vh;
+	overflow-y: scroll;
 	display: grid;
-	height: 100%;
+	grid-template:
+		'header'
+		'content'
+		'footer';
 }
