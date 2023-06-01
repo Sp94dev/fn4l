@@ -1,10 +1,10 @@
+import { Box, Flex, Heading } from '@chakra-ui/react';
 import Image from 'next/image';
+
 import Layout from '../components/layout/Layout';
 import styles from './index.module.css';
-import { Box, Flex, Heading } from '@chakra-ui/react';
 
-const IndexPage = () => {
-	return (
+const IndexPage = () => (
 		<Layout>
 			<Flex
 				as='section'
@@ -36,6 +36,5 @@ const IndexPage = () => {
 			</Flex>
 		</Layout>
 	);
-};
 
 export default IndexPage;
