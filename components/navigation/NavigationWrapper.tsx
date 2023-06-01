@@ -11,7 +11,7 @@ import {
   useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React from "react";
 
 import Navigation from "./Navigation";
 import NavigationButton from "./NavigationButton";
