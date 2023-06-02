@@ -14,6 +14,7 @@ const NavigationButton: React.FC<Props> = ({ onClick, isOpen }) => (
       onClick={onClick}
       aria-expanded={isOpen}
       icon={<RxHamburgerMenu size={36} aria-hidden focusable={false} />}
+      height={"fit-content"}
     ></IconButton>
   </>
 );
