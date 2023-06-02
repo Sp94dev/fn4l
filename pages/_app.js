@@ -1,17 +1,16 @@
-'use client';
-import { ChakraBaseProvider } from '@chakra-ui/react';
+"use client";
+import "../styles/global.css";
 
-import '../styles/global.css';
-import theme from '../theme';
+import { ChakraBaseProvider } from "@chakra-ui/react";
 
-const App = ({ Component, pageProps }) => {
-	return (
-		<>
-			<ChakraBaseProvider theme={theme}>
-				<Component {...pageProps} />
-			</ChakraBaseProvider>
-		</>
-	);
-};
+import theme from "../theme";
+
+const App = ({ Component, pageProps }) => (
+  <>
+    <ChakraBaseProvider theme={theme}>
+      <Component {...pageProps} />
+    </ChakraBaseProvider>
+  </>
+);
 
 export default App;

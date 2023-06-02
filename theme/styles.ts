@@ -1,8 +1,8 @@
 export const styles = {
-	global: {
-		body: {
-			bg: 'black',
-			color: 'white',
-		},
-	},
+  global: {
+    body: {
+      bg: "black",
+      color: "white",
+    },
+  },
 };
