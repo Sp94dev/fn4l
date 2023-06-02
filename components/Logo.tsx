@@ -1,7 +1,5 @@
 import { Image } from "@chakra-ui/image";
 
-import styles from "./logo.module.css";
-
 const Logo = () => (
   <Image
     tabIndex={0}
