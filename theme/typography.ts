@@ -15,7 +15,4 @@ export const fontWeights = {
   bold: 700,
 };
 
-export const colors = {
-  primary: "white",
-};
-export default { fonts, fontSizes, fontWeights, colors };
+export default { fonts, fontSizes, fontWeights };
