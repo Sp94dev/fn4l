@@ -8,7 +8,7 @@ type Props = {
   description: string;
 };
 
-const Person = ({ imageUrl, title, description }: Props) => (
+const Person = ({ imageUrl, title }: Props) => (
   <Box textAlign="center" role="group">
     <Box display="inline-block" borderRadius="full" overflow="hidden">
       <Image
@@ -27,9 +27,7 @@ const Person = ({ imageUrl, title, description }: Props) => (
       mt={2}
       border="1px"
       borderColor="transparent"
-    >
-      {description}
-    </Text>
+    ></Text>
   </Box>
 );
 
