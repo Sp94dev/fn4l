@@ -48,7 +48,14 @@ const IndexPage = () => {
         {fakeData.map((person, index) => {
           const current = person.title === currentPerson?.title;
           return (
-            <Link key={index} href={router.asPath + "/" + person.title}>
+            <Link
+              key={index}
+              onClick={() => {
+                router.push("/o-nas/" + person.title, undefined, {
+                  shallow: true,
+                });
+              }}
+            >
               <Person
                 imageUrl={person.imageUrl}
                 title={person.title}
