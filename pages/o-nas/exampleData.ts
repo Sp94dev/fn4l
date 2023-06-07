@@ -7,7 +7,7 @@ interface PersonProps {
 export const fakeData: PersonProps[] = [
   {
     imageUrl: "https://picsum.photos/id/231/80",
-    title: "John Doe",
+    title: "John Doe the First",
     description:
       "John Doe is a skilled Software Engineer with several years of experience in developing innovative software solutions. He specializes in full-stack development, utilizing a wide range of technologies and frameworks to create robust and scalable applications. John is passionate about solving complex problems and thrives in collaborative team environments. With his strong analytical skills and attention to detail, he consistently delivers high-quality code and contributes to the success of projects.",
   },

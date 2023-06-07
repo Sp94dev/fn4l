@@ -2,7 +2,6 @@ import { Flex, Heading, Link, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
 import Layout from "../../components/layout/Layout";
-import CircleImage from "../../components/o-nas/circleImage";
 import Person from "../../components/o-nas/person";
 import { fakeData } from "./exampleData";
 
@@ -12,76 +11,62 @@ type PersonProps = {
   description: string;
 };
 
-function findPersonByTitle(
-  title: string,
-  people: PersonProps[]
-): { foundPerson: PersonProps | null; restOfArray: PersonProps[] } {
-  const foundPersonIndex = people.findIndex((person) => person.title === title);
-
-  if (foundPersonIndex !== -1) {
-    const foundPerson = people[foundPersonIndex];
-    const restOfArray = [
-      ...people.slice(0, foundPersonIndex),
-      ...people.slice(foundPersonIndex + 1),
-    ];
-    return { foundPerson, restOfArray };
-  }
-
-  return { foundPerson: null, restOfArray: people };
-}
+const findCurrentPerson = (
+  slug: string | string[],
+  peopleArray: PersonProps[]
+) => {
+  if (
+    slug &&
+    (typeof slug === "string" || (Array.isArray(slug) && slug.length === 1))
+  ) {
+    const title = typeof slug === "string" ? slug : slug[0];
+    const currentPerson = peopleArray.find((person) => person.title === title);
+    return currentPerson;
+  } else return null;
+};
 
 const IndexPage = () => {
   const router = useRouter();
-  const slug = router.query.slug;
-  let foundPerson: PersonProps | null;
-  let restOfArray: PersonProps[];
-  if (slug) {
-    if (typeof slug === "string") {
-      ({ foundPerson, restOfArray } = findPersonByTitle(slug, fakeData));
-    } else {
-      ({ foundPerson, restOfArray } = findPersonByTitle(slug[0], fakeData));
-    }
-  }
+  const currentPerson: PersonProps | null = findCurrentPerson(
+    router.query.slug,
+    fakeData
+  );
+
   return (
     <Layout>
       <Heading alignSelf={"flex-start"} mb={4} my="30px">
         Kim jesteśmy?
       </Heading>
-      {!slug ? (
-        <Flex
-          as="section"
-          flexDirection={"row"}
-          alignItems="center"
-          justifyContent="center"
-          wrap="wrap"
-          gap="50px"
-        >
-          {fakeData.map((person, index) => (
+      <Flex
+        as="section"
+        flexDirection="row"
+        alignItems={currentPerson ? "flex-start" : "center"}
+        justifyContent={currentPerson ? "flex-start" : "center"}
+        wrap="wrap"
+        gap={currentPerson ? "30px" : "50px"}
+      >
+        {fakeData.map((person, index) => {
+          const current = person.title === currentPerson?.title;
+          return (
             <Link key={index} href={router.asPath + "/" + person.title}>
               <Person
                 imageUrl={person.imageUrl}
                 title={person.title}
                 description={person.description}
+                size={!current && "60px"}
+                hideTitle={currentPerson !== null}
               />
             </Link>
-          ))}
-        </Flex>
-      ) : foundPerson ? (
-        <Flex as="section" flexDirection={"column"} gap="50px">
-          <Flex flexDirection={"row"} gap="20px">
-            <CircleImage imageUrl={foundPerson.imageUrl} />
-            {restOfArray.map((person, index) => (
-              <CircleImage key={index} imageUrl={person.imageUrl} size="60px" />
-            ))}
-          </Flex>
-          <Heading h={2}>{foundPerson.title}</Heading>
-          <Text>{foundPerson.description}</Text>
-        </Flex>
-      ) : (
-        <Heading>Person not found</Heading>
-      )}
+          );
+        })}
+      </Flex>
 
-      <p></p>
+      {currentPerson && (
+        <Flex flexDir={"column"} gap={"50px"} my={"50px"}>
+          <Heading h={2}>{currentPerson.title}</Heading>
+          <Text>{currentPerson.description}</Text>
+        </Flex>
+      )}
     </Layout>
   );
 };

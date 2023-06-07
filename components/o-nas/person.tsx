@@ -1,33 +1,34 @@
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 
 import { colors } from "../../theme/colors";
+import CircleImage from "./circleImage";
 
 type Props = {
   imageUrl: string;
   title: string;
   description: string;
+  hideTitle?: boolean;
+  size?: string;
 };
 
-const Person = ({ imageUrl, title }: Props) => (
+const Person = ({ imageUrl, title, hideTitle = false, size }: Props) => (
   <Box textAlign="center" role="group">
-    <Box display="inline-block" borderRadius="full" overflow="hidden">
-      <Image
-        src={imageUrl}
-        alt="Circle Image"
-        boxSize="80px"
-        objectFit="cover"
-        backgroundColor={colors.accent}
-      />
-    </Box>
-    <Text fontSize="lg" mt={2}>
-      {title}
-    </Text>
-    <Text
-      _groupHover={{ border: "1px", borderColor: colors.accent }}
-      mt={2}
-      border="1px"
-      borderColor="transparent"
-    ></Text>
+    <CircleImage size={size} imageUrl={imageUrl} altText={title} />
+
+    {!hideTitle && (
+      <Text
+        _groupHover={{
+          borderBottom: "1px",
+          borderColor: colors.accent,
+        }}
+        mt={2}
+        fontSize="lg"
+        borderBottom="1px"
+        borderColor="transparent"
+      >
+        {title}
+      </Text>
+    )}
   </Box>
 );
 
