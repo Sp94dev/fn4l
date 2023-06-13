@@ -1,4 +1,4 @@
-import { Center, Grid, Heading, Image, Text } from "@chakra-ui/react";
+import { Grid, Heading, Image, Text } from "@chakra-ui/react";
 
 import Layout from "../components/layout/Layout";
 import styles from "./index.module.css";
