@@ -2,8 +2,8 @@ import { Flex, Heading, Link, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
 import Layout from "../../components/layout/Layout";
+import { fakeData } from "../../components/o-nas/exampleData";
 import Person from "../../components/o-nas/person";
-import { fakeData } from "./exampleData";
 
 type PersonProps = {
   imageUrl: string;
