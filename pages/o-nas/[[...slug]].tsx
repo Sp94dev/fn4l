@@ -49,6 +49,7 @@ const IndexPage = () => {
           const current = person.title === currentPerson?.title;
           return (
             <Link
+              _hover={{ textDecoration: "none" }}
               key={index}
               onClick={() => {
                 router.push("/o-nas/" + person.title, undefined, {
@@ -70,6 +71,15 @@ const IndexPage = () => {
 
       {currentPerson && (
         <Flex flexDir={"column"} gap={"50px"} my={"50px"}>
+          <Link
+            onClick={() => {
+              router.push("/o-nas/", undefined, {
+                shallow: true,
+              });
+            }}
+          >
+            Wróć
+          </Link>
           <Heading h={2}>{currentPerson.title}</Heading>
           <Text>{currentPerson.description}</Text>
         </Flex>
