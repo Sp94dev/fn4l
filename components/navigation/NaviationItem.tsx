@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import styles from "../../styles/utils.module.css";
+import { colors } from "../../theme/colors";
 
 interface Props {
   link: string;
@@ -30,14 +31,12 @@ const NavigationItem = ({ link, text, mobile }: Props) => {
     <ListItem
       fontWeight={"normal"}
       mb={2}
-      sx={{
-        ".active": {
-          borderBottom: "2px solid",
-          borderColor: mobile ? "#40ff00" : "#E4FF00", // tried to find different color for white background - to discuss
-          fontWeight: "bold",
-        },
-      }}
+      fontSize={"2xl"}
+      textUnderlineOffset={10}
       _hover={{
+        textDecoration: "underline",
+        textDecorationColor: colors.accent,
+        // background - to discuss
         fontWeight: "bold",
       }}
     >

@@ -1,16 +1,27 @@
-import { Flex } from "@chakra-ui/react";
+import { Container, Flex } from "@chakra-ui/react";
+import Link from "next/link";
 
+import { colors } from "../../theme/colors";
 import Logo from "../Logo";
 import NavigationWrapper from "../navigation/NavigationWrapper";
 
 export const Header = () => (
-  <Flex
-    as="header"
-    justifyContent={"space-between"}
-    gap={4}
-    height={"fit-content"}
+  <Container
+    backgroundColor={{ base: colors.accent, lg: "transparent" }}
+    maxWidth={"container.xl"}
   >
-    <Logo />
-    <NavigationWrapper />
-  </Flex>
+    <Flex
+      as="header"
+      justifyContent={"space-between"}
+      alignItems={"center"}
+      height={{ base: 14, lg: "min-content" }}
+      gap={8}
+    >
+      <Link href="/">
+        <Logo />
+      </Link>
+
+      <NavigationWrapper />
+    </Flex>
+  </Container>
 );
