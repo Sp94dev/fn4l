@@ -24,7 +24,7 @@ const PawIcon = createIcon({
   ),
 });
 
-const NavigationItem = ({ link, text, mobile }: Props) => {
+const NavigationItem = ({ link, text }: Props) => {
   const router = useRouter();
 
   return (

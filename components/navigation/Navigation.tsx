@@ -30,12 +30,7 @@ const Navigation = ({ type }: Props) => (
     }
   >
     {routes.map(({ link, text }) => (
-      <NavigationItem
-        text={text}
-        link={link}
-        key={link}
-        mobile={type === "mobile"}
-      />
+      <NavigationItem text={text} link={link} key={link} />
     ))}
   </List>
 );
