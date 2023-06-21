@@ -17,13 +17,13 @@ const Header = () => {
   const { scrollYProgress } = useContext(ScrollContext);
   const bgColor = useTransform(
     scrollYProgress,
-    [0.0, 1.0],
+    [0, 1],
     [setOpacity(colors.accent, 0), colors.accent]
   );
 
   const textColor = useTransform(
     scrollYProgress,
-    [0.0, 1.0],
+    [0, 1],
     [colors.primaryText, colors.black]
   );
 
@@ -45,7 +45,6 @@ const Header = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
           height={{ base: 14, lg: "min-content" }}
-          minHeight={{ lg: 48 }}
           gap={8}
         >
           <Link href="/">
