@@ -36,8 +36,6 @@ const NavigationItem = ({ link, text }: Props) => {
       _hover={{
         textDecoration: "underline",
         textDecorationColor: colors.accent,
-        // background - to discuss
-        fontWeight: "bold",
       }}
     >
       <Link
