@@ -15,9 +15,18 @@ const setOpacity = (hex: string, alpha: number) =>
 
 const Header = () => {
   const { scrollYProgress } = useContext(ScrollContext);
-  const bgColor = useTransform(scrollYProgress, (value) =>
-    setOpacity(colors.accent, value)
+  const bgColor = useTransform(
+    scrollYProgress,
+    [0.0, 1.0],
+    [setOpacity(colors.accent, 0), colors.accent]
   );
+
+  const textColor = useTransform(
+    scrollYProgress,
+    [0.0, 1.0],
+    [colors.primaryText, colors.black]
+  );
+
   return (
     <Box
       as={motion.div}
@@ -25,7 +34,7 @@ const Header = () => {
       display={"flex"}
       alignItems={"center"}
       width={"full"}
-      style={{ backgroundColor: bgColor }}
+      style={{ backgroundColor: bgColor, color: textColor }}
     >
       <Container
         backgroundColor={{ base: colors.accent, lg: "transparent" }}
