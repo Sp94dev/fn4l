@@ -16,7 +16,7 @@ const Logo = () => (
       <Image
         tabIndex={0}
         marginTop={9}
-        height={60}
+        height={40}
         alt="Fundacja na czterech łapach Logo"
         src="/images/logo_grey.svg"
         sizes={"contain"}
