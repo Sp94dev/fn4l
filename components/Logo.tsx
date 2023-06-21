@@ -23,15 +23,14 @@ const Logo = () => {
         />
       </Hide>
       <Show above="lg">
-        <Box as={motion.div}>
-          <Image
-            tabIndex={0}
-            height={9}
-            alt="Fundacja na czterech łapach Logo"
-            src="/images/paw-icon__black.svg"
-            sizes={"contain"}
-          />
-        </Box>
+        <Image
+          tabIndex={0}
+          height={9}
+          alt="Fundacja na czterech łapach Logo"
+          src="/images/paw-icon__black.svg"
+          sizes={"contain"}
+        />
+
         <Box as={motion.div} style={{ height, opacity, marginTop }}>
           <Image
             tabIndex={0}
