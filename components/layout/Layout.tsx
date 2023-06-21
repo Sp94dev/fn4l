@@ -1,4 +1,4 @@
-import { Container } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import { ReactNode } from "react";
 
@@ -14,17 +14,15 @@ const Layout = ({
   children,
   title = "Fundacja terapeuta na czterech łapach",
 }: Props) => (
-  <>
+  <Box className={layout.container} py={8} px={6}>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1, width=device-width" />
     </Head>
     <Header />
-    <Container px={6} maxW={"container.xl"}>
-      <main className={layout.main}>{children}</main>
-    </Container>
-  </>
+    <main className={layout.main}>{children}</main>
+  </Box>
 );
 
 export default Layout;
