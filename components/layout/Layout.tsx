@@ -2,7 +2,7 @@ import { Container } from "@chakra-ui/react";
 import Head from "next/head";
 import { ReactNode } from "react";
 
-import { Header } from "../header/Header";
+import { HeaderWrapper } from "../header/HeaderWrapper";
 import layout from "./layout.module.css";
 
 type Props = {
@@ -20,7 +20,7 @@ const Layout = ({
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1, width=device-width" />
     </Head>
-    <Header />
+    <HeaderWrapper />
     <Container px={6} maxW={"container.xl"}>
       <main className={layout.main}>{children}</main>
     </Container>

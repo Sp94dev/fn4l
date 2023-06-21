@@ -1,32 +1,53 @@
 import { Box, Container, Flex } from "@chakra-ui/react";
+import { motion, useTransform } from "framer-motion";
 import Link from "next/link";
+import { useContext } from "react";
 
 import { colors } from "../../theme/colors";
 import Logo from "../Logo";
 import NavigationWrapper from "../navigation/NavigationWrapper";
+import { ScrollContext } from "./scrollContext/scrollContext";
 
-export const Header = () => (
-  <>
-    <Container
-      backgroundColor={{ base: colors.accent, lg: "transparent" }}
-      maxWidth={"container.xl"}
+const setOpacity = (hex: string, alpha: number) =>
+  `${hex}${Math.floor(alpha * 255)
+    .toString(16)
+    .padStart(2, "0")}`;
+
+const Header = () => {
+  const { scrollYProgress } = useContext(ScrollContext);
+  const bgColor = useTransform(scrollYProgress, (value) =>
+    setOpacity(colors.accent, value)
+  );
+  return (
+    <Box
+      as={motion.div}
       position={"fixed"}
+      display={"flex"}
+      alignItems={"center"}
+      width={"full"}
+      style={{ backgroundColor: bgColor }}
     >
-      <Flex
-        as="header"
-        justifyContent={"space-between"}
-        alignItems={"center"}
-        height={{ base: 14, lg: "min-content" }}
-        minHeight={{ lg: 48 }}
-        gap={8}
+      <Container
+        backgroundColor={{ base: colors.accent, lg: "transparent" }}
+        maxWidth={"container.xl"}
       >
-        <Link href="/">
-          <Logo />
-        </Link>
+        <Flex
+          as="header"
+          justifyContent={"space-between"}
+          alignItems={"center"}
+          height={{ base: 14, lg: "min-content" }}
+          minHeight={{ lg: 48 }}
+          gap={8}
+        >
+          <Link href="/">
+            <Logo />
+          </Link>
 
-        <NavigationWrapper />
-      </Flex>
-    </Container>
-    <Box height={{ base: 14, lg: "min-content" }} minHeight={{ lg: 48 }}></Box>
-  </>
-);
+          <NavigationWrapper />
+        </Flex>
+      </Container>
+    </Box>
+  );
+};
+
+export default Header;
