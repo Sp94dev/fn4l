@@ -17,7 +17,7 @@ const Header = () => {
   const { scrollYProgress } = useContext(ScrollContext);
   const bgColor = useTransform(
     scrollYProgress,
-    [0, 1],
+    [0.7, 1],
     [setOpacity(colors.accent, 0), colors.accent]
   );
 
@@ -46,6 +46,7 @@ const Header = () => {
           alignItems={"center"}
           height={{ base: 14, lg: "min-content" }}
           gap={8}
+          position={"relative"}
         >
           <Link href="/">
             <Logo />
