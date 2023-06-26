@@ -1,7 +1,6 @@
 import { Grid, Heading, Image, Text } from "@chakra-ui/react";
 
 import Layout from "../components/layout/Layout";
-import styles from "./index.module.css";
 
 const IndexPage = () => (
   <Layout>
@@ -24,7 +23,6 @@ const IndexPage = () => (
       alignContent={"center"}
     >
       <Image
-        className={styles.image}
         gridArea={"img"}
         width={{ base: "auto" }}
         height={{ base: "15rem", lg: "25rem" }}
@@ -35,7 +33,6 @@ const IndexPage = () => (
         my={{ base: 6 }}
       />
       <Heading
-        className={styles.title}
         display={"inline-flex"}
         alignSelf={"end"}
         justifySelf={{ base: "center", lg: "start" }}
