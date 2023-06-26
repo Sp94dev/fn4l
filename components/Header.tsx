@@ -1,9 +1,9 @@
 import { Container, Flex } from "@chakra-ui/react";
 import Link from "next/link";
 
-import { colors } from "../../theme/colors";
-import Logo from "../Logo";
-import NavigationWrapper from "../navigation/NavigationWrapper";
+import { colors } from "../theme/colors";
+import Logo from "./Logo";
+import NavigationWrapper from "./navigation/NavigationWrapper";
 
 export const Header = () => (
   <Container

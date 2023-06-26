@@ -1,6 +1,6 @@
 import { Grid, Heading, Image, Text } from "@chakra-ui/react";
 
-import Layout from "../components/layout/Layout";
+import Layout from "../components/Layout";
 
 const IndexPage = () => (
   <Layout>
