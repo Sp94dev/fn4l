@@ -27,8 +27,6 @@ const PawIcon = createIcon({
 const NavigationItem = ({ link, text }: Props) => {
   const router = useRouter();
   const isActive = router.pathname === link;
-  console.log(link, router.pathname);
-
   return (
     <ListItem
       fontWeight={"normal"}
