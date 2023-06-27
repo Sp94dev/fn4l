@@ -1,8 +1,7 @@
 import { Grid, Heading, Image, Text } from "@chakra-ui/react";
 
-import Layout from "../components/layout/Layout";
+import Layout from "../components/Layout";
 import ListItem from "../components/ListItem";
-import styles from "./index.module.css";
 
 const IndexPage = () => (
   <Layout>
@@ -25,7 +24,6 @@ const IndexPage = () => (
       alignContent={"center"}
     >
       <Image
-        className={styles.image}
         gridArea={"img"}
         width={{ base: "auto" }}
         height={{ base: "15rem", lg: "25rem" }}
@@ -36,7 +34,6 @@ const IndexPage = () => (
         my={{ base: 6 }}
       />
       <Heading
-        className={styles.title}
         display={"inline-flex"}
         alignSelf={"end"}
         justifySelf={{ base: "center", lg: "start" }}
@@ -50,7 +47,26 @@ const IndexPage = () => (
       <Text gridArea={"desc"} justifySelf={"start"} alignSelf={"start"}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non augue
         quis enim lobortis ultrices. Aenean tempor mollis massa eget fringilla.
-        Duis cursus elit eget pretium dignissim.{" "}
+        Duis cursus elit eget pretium dignissim. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Etiam non augue quis enim lobortis
+        ultrices. Aenean tempor mollis massa eget fringilla. Duis cursus elit
+        eget pretium dignissim. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Etiam non augue quis enim lobortis ultrices. Aenean
+        tempor mollis massa eget fringilla. Duis cursus elit eget pretium
+        dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Etiam non augue quis enim lobortis ultrices. Aenean tempor mollis massa
+        eget fringilla. Duis cursus elit eget pretium dignissim. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Etiam non augue quis enim
+        lobortis ultrices. Aenean tempor mollis massa eget fringilla. Duis
+        cursus elit eget pretium dignissim. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Etiam non augue quis enim lobortis
+        ultrices. Aenean tempor mollis massa eget fringilla. Duis cursus elit
+        eget pretium dignissim. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Etiam non augue quis enim lobortis ultrices. Aenean
+        tempor mollis massa eget fringilla. Duis cursus elit eget pretium
+        dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Etiam non augue quis enim lobortis ultrices. Aenean tempor mollis massa
+        eget fringilla. Duis cursus elit eget pretium dignissim.
       </Text>
       <ListItem
         img={{
