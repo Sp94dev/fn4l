@@ -2,8 +2,7 @@ import { Container } from "@chakra-ui/react";
 import Head from "next/head";
 import { ReactNode } from "react";
 
-import { Header } from "../header/Header";
-import layout from "./layout.module.css";
+import { Header } from "./Header";
 
 type Props = {
   children?: ReactNode;
@@ -22,7 +21,7 @@ const Layout = ({
     </Head>
     <Header />
     <Container px={6} maxW={"container.xl"}>
-      <main className={layout.main}>{children}</main>
+      <main>{children}</main>
     </Container>
   </>
 );
