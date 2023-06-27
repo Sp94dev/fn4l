@@ -1,5 +1,6 @@
 import { Image } from "@chakra-ui/image";
-import { Button, Flex, Text } from "@chakra-ui/react";
+import { Flex, Link, Text } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 import { colors } from "../theme/colors";
 
@@ -7,10 +8,10 @@ interface ListItemProps {
   img: { src: string; alt?: string };
   title: string;
   description: string;
-  ButtonText?: string;
+  button?: { text: string; href: string };
 }
 
-const ListItem = ({ img, title, description, ButtonText }: ListItemProps) => (
+const ListItem = ({ img, title, description, button }: ListItemProps) => (
   <Flex gap={6}>
     <Image
       minWidth={32}
@@ -22,19 +23,22 @@ const ListItem = ({ img, title, description, ButtonText }: ListItemProps) => (
     <Flex width={"100%"} direction="column" alignItems={"flex-start"} gap={2}>
       <Text fontSize="lg">{title}</Text>
       <Text>{description}</Text>
-      {ButtonText && (
-        <Button
+      {button && (
+        <Link
+          href={button.href}
+          as={NextLink}
           paddingY={2}
           paddingX={6}
           alignSelf={"flex-end"}
           backgroundColor={colors.accent}
           textColor={colors.black}
+          borderRadius={"base"}
           _hover={{
             backgroundColor: colors.lightGrey,
           }}
         >
-          {ButtonText}
-        </Button>
+          {button.text}
+        </Link>
       )}
     </Flex>
   </Flex>
