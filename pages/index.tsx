@@ -46,7 +46,26 @@ const IndexPage = () => (
       <Text gridArea={"desc"} justifySelf={"start"} alignSelf={"start"}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam non augue
         quis enim lobortis ultrices. Aenean tempor mollis massa eget fringilla.
-        Duis cursus elit eget pretium dignissim.{" "}
+        Duis cursus elit eget pretium dignissim. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Etiam non augue quis enim lobortis
+        ultrices. Aenean tempor mollis massa eget fringilla. Duis cursus elit
+        eget pretium dignissim. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Etiam non augue quis enim lobortis ultrices. Aenean
+        tempor mollis massa eget fringilla. Duis cursus elit eget pretium
+        dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Etiam non augue quis enim lobortis ultrices. Aenean tempor mollis massa
+        eget fringilla. Duis cursus elit eget pretium dignissim. Lorem ipsum
+        dolor sit amet, consectetur adipiscing elit. Etiam non augue quis enim
+        lobortis ultrices. Aenean tempor mollis massa eget fringilla. Duis
+        cursus elit eget pretium dignissim. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Etiam non augue quis enim lobortis
+        ultrices. Aenean tempor mollis massa eget fringilla. Duis cursus elit
+        eget pretium dignissim. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Etiam non augue quis enim lobortis ultrices. Aenean
+        tempor mollis massa eget fringilla. Duis cursus elit eget pretium
+        dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Etiam non augue quis enim lobortis ultrices. Aenean tempor mollis massa
+        eget fringilla. Duis cursus elit eget pretium dignissim.
       </Text>
     </Grid>
   </Layout>

@@ -1,8 +1,8 @@
 import { createIcon, ListItem } from "@chakra-ui/react";
-import Link from "next/link";
+import { Link } from "@chakra-ui/react";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 
-import styles from "../../styles/utils.module.css";
 import { colors } from "../../theme/colors";
 
 interface Props {
@@ -26,7 +26,7 @@ const PawIcon = createIcon({
 
 const NavigationItem = ({ link, text }: Props) => {
   const router = useRouter();
-
+  const isActive = router.pathname === link;
   return (
     <ListItem
       fontWeight={"normal"}
@@ -37,11 +37,18 @@ const NavigationItem = ({ link, text }: Props) => {
         textDecoration: "underline",
         textDecorationColor: colors.accent,
       }}
+      sx={{
+        ".active": {
+          textDecoration: "underline",
+          textDecorationColor: colors.accent,
+        },
+      }}
     >
       <Link
+        as={NextLink}
         href={link}
-        aria-current={link === router.pathname}
-        className={`${link === router.pathname && "active"} ${styles.pb}`}
+        aria-current={isActive}
+        className={isActive && "active"}
       >
         <PawIcon /> {text}
       </Link>
