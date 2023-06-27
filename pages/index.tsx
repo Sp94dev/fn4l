@@ -1,7 +1,6 @@
 import { Grid, Heading, Image, Text } from "@chakra-ui/react";
 
 import Layout from "../components/Layout";
-import ListItem from "../components/ListItem";
 
 const IndexPage = () => (
   <Layout>
@@ -68,36 +67,6 @@ const IndexPage = () => (
         Etiam non augue quis enim lobortis ultrices. Aenean tempor mollis massa
         eget fringilla. Duis cursus elit eget pretium dignissim.
       </Text>
-      <ListItem
-        img={{
-          src: "https://picsum.photos/id/231/200",
-        }}
-        title={"Luna"}
-        description={
-          "Przyjazny pies terapeutyczny, pełen miłości i radości. Kocha pracę z dziećmi, pływanie i zabawę w szukanie ukrytych skarbów."
-        }
-        ButtonText="Poznaj mnie"
-      />{" "}
-      <ListItem
-        img={{
-          src: "https://picsum.photos/id/231/200",
-        }}
-        title={"Luna"}
-        description={
-          "Przyjazny pies terapeutyczny, pełen miłości i radości. Kocha pracę z dziećmi, pływanie i zabawę w szukanie ukrytych skarbów."
-        }
-        ButtonText="Poznaj mnie"
-      />{" "}
-      <ListItem
-        img={{
-          src: "https://picsum.photos/id/231/200",
-        }}
-        title={"Luna"}
-        description={
-          "Przyjazny pies terapeutyczny, pełen miłości i radości. Kocha pracę z dziećmi, pływanie i zabawę w szukanie ukrytych skarbów."
-        }
-        ButtonText="Poznaj mnie"
-      />
     </Grid>
   </Layout>
 );
