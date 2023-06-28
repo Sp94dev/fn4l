@@ -1,7 +1,5 @@
 import { Box, Image } from "@chakra-ui/react";
 
-import { colors } from "../../theme/colors";
-
 type Props = {
   imageUrl: string;
   altText?: string;
@@ -16,13 +14,7 @@ const CircleImage = ({ imageUrl, altText, size }: Props) => (
     overflow="hidden"
     display="inline-block"
   >
-    <Image
-      src={imageUrl}
-      alt={altText}
-      boxSize={size}
-      objectFit="cover"
-      backgroundColor={colors.accent}
-    />
+    <Image src={imageUrl} alt={altText} boxSize={size} objectFit="cover" />
   </Box>
 );
 
