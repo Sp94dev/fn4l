@@ -2,8 +2,6 @@ import { Image } from "@chakra-ui/image";
 import { Flex, Link, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
 
-import { colors } from "../theme/colors";
-
 interface ListItemProps {
   img: { src: string; alt?: string };
   title: string;
@@ -30,11 +28,11 @@ const ListItem = ({ img, title, description, button }: ListItemProps) => (
           paddingY={2}
           paddingX={6}
           alignSelf={"flex-end"}
-          backgroundColor={colors.accent}
-          textColor={colors.black}
+          backgroundColor="accent"
+          textColor="black"
           borderRadius={"base"}
           _hover={{
-            backgroundColor: colors.lightGrey,
+            backgroundColor: "colors.lightGrey",
           }}
         >
           {button.text}

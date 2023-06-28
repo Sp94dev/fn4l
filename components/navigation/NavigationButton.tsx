@@ -1,8 +1,6 @@
 import { IconButton } from "@chakra-ui/react";
 import { RxHamburgerMenu } from "react-icons/rx";
 
-import { colors } from "../../theme/colors";
-
 interface Props {
   onClick?: () => void;
   isOpen: boolean;
@@ -15,9 +13,7 @@ const NavigationButton: React.FC<Props> = ({ onClick, isOpen }) => (
       aria-controls="Main menu"
       onClick={onClick}
       aria-expanded={isOpen}
-      icon={
-        <RxHamburgerMenu aria-hidden focusable={false} color={colors.black} />
-      }
+      icon={<RxHamburgerMenu aria-hidden focusable={false} color="black" />}
       height={"fit-content"}
     ></IconButton>
   </>

@@ -33,6 +33,7 @@ const IndexPage = () => (
         justifySelf={"center"}
         my={{ base: 6 }}
       />
+
       <Heading
         display={"inline-flex"}
         alignSelf={"end"}
@@ -40,7 +41,8 @@ const IndexPage = () => (
         mb={4}
         pb={1}
         gridArea={"title"}
-        borderBottom={"1px solid #e4ff00"}
+        borderBottom={"1px solid"}
+        borderColor="accent"
       >
         Kim jesteśmy?
       </Heading>

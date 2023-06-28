@@ -37,7 +37,7 @@ const Header = () => {
       style={{ backgroundColor: bgColor, color: textColor }}
     >
       <Container
-        backgroundColor={{ base: colors.accent, lg: "transparent" }}
+        backgroundColor={{ base: "accent", lg: "transparent" }}
         maxWidth={"container.xl"}
       >
         <Flex
