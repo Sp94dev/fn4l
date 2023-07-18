@@ -1,4 +1,6 @@
-export const Drawer = {
+import { ComponentStyleConfig } from "@chakra-ui/react";
+
+export const CustomDrawer: ComponentStyleConfig = {
   baseStyle: {
     dialog: {
       bg: "#EFEFEF",
