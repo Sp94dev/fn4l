@@ -36,7 +36,7 @@ export const AboutUs = () => (
         zaczęła się nasza przygoda.
       </Text>
       <Box>
-        <Button isDisabled={true}>Dowiedz się więcej</Button>
+        <Button>Dowiedz się więcej</Button>
       </Box>
     </Flex>
   </Flex>

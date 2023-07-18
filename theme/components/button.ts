@@ -1,23 +1,28 @@
 import { ComponentStyleConfig } from "@chakra-ui/react";
 
+const hoverButton = {
+  bg: "accent",
+  transition: "var(--default-transition)",
+  filter: "brightness(105%)",
+};
+
 export const CustomButton: ComponentStyleConfig = {
   variants: {
-    baseStyle: {
-      fontSize: 4,
-    },
     solid: {
       bg: "accent",
       px: 7,
       py: 3,
+      boxShadow: "md",
       _hover: {
-        bg: "accent",
-        transition: "var(--default-transition)",
-        filter: "brightness(95%)",
+        ...hoverButton,
+        _disabled: {
+          ...hoverButton,
+        },
       },
       _active: {
         bg: "accent",
-        transition: "var(--default-transition)",
         filter: "brightness(105%)",
+        shadow: "sm",
       },
       _disabled: {
         cursor: "not-allowed",
@@ -25,5 +30,8 @@ export const CustomButton: ComponentStyleConfig = {
         filter: "brightness(90%%)",
       },
     },
+  },
+  defaultProps: {
+    variant: "solid",
   },
 };
