@@ -10,7 +10,7 @@ export const CustomButton: ComponentStyleConfig = {
   variants: {
     solid: {
       bg: `accent`,
-      color: "textPrimary",
+      color: "black",
       px: 7,
       py: 3,
       boxShadow: "md",
