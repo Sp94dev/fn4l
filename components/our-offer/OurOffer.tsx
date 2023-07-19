@@ -1,4 +1,11 @@
-import { Button, Flex, Grid, Heading, Text } from "@chakra-ui/react";
+import {
+  Button,
+  Flex,
+  Grid,
+  Heading,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react";
 
 import { Card } from "./Card";
 
@@ -29,32 +36,36 @@ const offer = [
   },
 ];
 
-export const OurOffer = () => (
-  <>
-    <Flex
-      direction="column"
-      p={{ base: 5, lg: 12 }}
-      gap={{ base: 7, sm: 10, lg: 28 }}
-      bg="#D5E4CD"
-      alignItems={{ base: "flex-start", lg: "center" }}
-    >
-      <Heading as="h2">Nasza Oferta</Heading>
-      <Text as="p" textAlign={{ base: "start", lg: "center" }}>
-        Chcemy upowszechniać animaloterapię, jako metodę wspierającą
-        rehabilitację, edukację, aktywizację, działania terapeutyczne i
-        psychoterapeutyczne. Jest to do dziś główny cel naszych działań.
-        Prowadzimy zajęcia z udziałem zwierząt (np. dogoterapię, alpakoterapię,
-        hipoterapię) kierowane m.in. do osób z niepełnosprawnościami.
-      </Text>
-      <Grid
-        gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
-        gap={{ base: 8, lg: 4 }}
+export const OurOffer = () => {
+  const { colorMode } = useColorMode();
+  return (
+    <>
+      <Flex
+        direction="column"
+        p={{ base: 5, lg: 12 }}
+        gap={{ base: 7, sm: 10, lg: 28 }}
+        bg={`${colorMode}.bgSecondary`}
+        alignItems={{ base: "flex-start", lg: "center" }}
       >
-        {offer.map(({ img, name, description }, index) => (
-          <Card key={index} img={img} name={name} description={description} />
-        ))}
-      </Grid>
-      <Button>Dowiedz się więcej</Button>
-    </Flex>
-  </>
-);
+        <Heading as="h2">Nasza Oferta</Heading>
+        <Text as="p" textAlign={{ base: "start", lg: "center" }}>
+          Chcemy upowszechniać animaloterapię, jako metodę wspierającą
+          rehabilitację, edukację, aktywizację, działania terapeutyczne i
+          psychoterapeutyczne. Jest to do dziś główny cel naszych działań.
+          Prowadzimy zajęcia z udziałem zwierząt (np. dogoterapię,
+          alpakoterapię, hipoterapię) kierowane m.in. do osób z
+          niepełnosprawnościami.
+        </Text>
+        <Grid
+          gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
+          gap={{ base: 8, lg: 4 }}
+        >
+          {offer.map(({ img, name, description }, index) => (
+            <Card key={index} img={img} name={name} description={description} />
+          ))}
+        </Grid>
+        <Button>Dowiedz się więcej</Button>
+      </Flex>
+    </>
+  );
+};

@@ -14,9 +14,10 @@ export const CustomHeadingStyle: ComponentStyleConfig = {
       pb: 1,
     },
   },
-  baseStyle: {
+  baseStyle: ({ colorMode }) => ({
     fontFamily: "Open Sans Condensed",
     letterSpacing: "4px",
     fontWeight: 700,
-  },
+    color: `${colorMode}.textPrimary`,
+  }),
 };

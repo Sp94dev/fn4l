@@ -9,12 +9,14 @@ const hoverButton = {
 export const CustomButton: ComponentStyleConfig = {
   variants: {
     solid: {
-      bg: "accent",
+      bg: `accent`,
+      color: "textPrimary",
       px: 7,
       py: 3,
       boxShadow: "md",
       _hover: {
         ...hoverButton,
+        bg: "accent",
         _disabled: {
           ...hoverButton,
         },
