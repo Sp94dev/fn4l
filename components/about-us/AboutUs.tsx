@@ -4,8 +4,10 @@ export const AboutUs = () => (
   <Flex
     as="section"
     pt="8"
+    maxW="container.xl"
+    alignSelf="center"
     direction={{ base: "column", md: "row" }}
-    alignItems="stretch"
+    alignItems="center"
     gap={{ base: 4, lg: 8 }}
   >
     <Box flex="1" pl={{ base: "unset", lg: 0 }} alignItems="center">

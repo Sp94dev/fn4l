@@ -20,7 +20,7 @@ const Layout = ({
       <meta name="viewport" content="initial-scale=1, width=device-width" />
     </Head>
     <HeaderWrapper />
-    <Container px={6} maxW={"container.xl"}>
+    <Container px="8" maxW="full">
       <main>{children}</main>
     </Container>
   </>

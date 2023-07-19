@@ -1,11 +1,10 @@
 import { extendTheme } from "@chakra-ui/react";
 
 import { colors } from "./colors";
-import { CustomDrawer } from "./components/drawer";
+import { components } from "./components/components";
 import { config } from "./config";
 import { styles } from "./styles";
 import * as typography from "./typography";
-import { components } from "./components/components";
 
 const overrides = {
   config,
