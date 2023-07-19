@@ -1,5 +1,7 @@
 "use client";
 import "../styles/global.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/open-sans-condensed";
 
 import { ChakraBaseProvider } from "@chakra-ui/react";
 
