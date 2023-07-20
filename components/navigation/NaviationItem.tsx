@@ -3,8 +3,6 @@ import { Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
-import { colors } from "../../theme/colors";
-
 interface Props {
   link: string;
   text: string;
@@ -33,22 +31,16 @@ const NavigationItem = ({ link, text }: Props) => {
       mb={2}
       fontSize={"2xl"}
       textUnderlineOffset={10}
-      _hover={{
-        textDecoration: "underline",
-        textDecorationColor: colors.accent,
-      }}
-      sx={{
-        ".active": {
-          textDecoration: "underline",
-          textDecorationColor: colors.accent,
-        },
-      }}
     >
       <Link
         as={NextLink}
         href={link}
         aria-current={isActive}
         className={isActive && "active"}
+        _hover={{
+          textDecoration: "underline",
+          textDecorationColor: "accent",
+        }}
       >
         <PawIcon /> {text}
       </Link>
