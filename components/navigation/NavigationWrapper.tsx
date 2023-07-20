@@ -8,11 +8,14 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
+  Flex,
+  useColorMode,
   useDisclosure,
   useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
 
+import ColorModeToggle from "../header/ColorModeToggle";
 import Navigation from "./Navigation";
 import NavigationButton from "./NavigationButton";
 
@@ -20,13 +23,16 @@ const NavigationWrapper = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const [desktopView] = useMediaQuery("(min-width: 992px)"); // Chakra lg breakpoint
-
+  const { colorMode } = useColorMode();
   return (
-    <Box as="nav" aria-label="main-menu">
+    <Box as="nav" aria-label="main-menu" height="min-content">
       {desktopView ? (
         <Navigation type="desktop" />
       ) : (
-        <NavigationButton onClick={onOpen} isOpen={isOpen} />
+        <Flex alignItems="center" columnGap={6} padding={8}>
+          <ColorModeToggle />
+          <NavigationButton onClick={onOpen} isOpen={isOpen} />
+        </Flex>
       )}
       <Drawer
         isOpen={isOpen}
@@ -43,6 +49,14 @@ const NavigationWrapper = () => {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
+      <Box
+        position="absolute"
+        zIndex={-1}
+        right="0%"
+        height="px"
+        width="100vw"
+        bg={`${colorMode}.textPrimary`}
+      ></Box>
     </Box>
   );
 };
