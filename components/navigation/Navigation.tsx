@@ -23,8 +23,8 @@ const Navigation = ({ type }: Props) => {
       padding={8}
       display="flex"
       alignItems={desktopView ? "center" : "start"}
-      columnGap={4}
-      whiteSpace={"nowrap"}
+      columnGap={{ base: 4, xl: 8 }}
+      whiteSpace="nowrap"
       flexDirection={desktopView ? "row" : "column"}
     >
       {routes.map(({ link, text }) => (

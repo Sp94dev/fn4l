@@ -5,15 +5,15 @@ import Logo from "../Logo";
 import NavigationWrapper from "../navigation/NavigationWrapper";
 
 const Header = () => (
-  <Box display={"flex"} alignItems={"center"} width={"full"}>
-    <Container maxWidth={"container.xl"}>
+  <Flex alignItems="center" width="full">
+    <Container maxWidth="full">
       <Flex
         as="header"
-        justifyContent={"space-between"}
-        alignItems={"top"}
+        justifyContent="space-between"
+        alignItems="top"
         height="min-content"
-        position={"relative"}
-        overflow={"hidden"}
+        position="relative"
+        overflow="hidden"
       >
         <Box
           flexShrink={2}
@@ -29,7 +29,7 @@ const Header = () => (
         <NavigationWrapper />
       </Flex>
     </Container>
-  </Box>
+  </Flex>
 );
 
 export default Header;

@@ -25,11 +25,11 @@ const NavigationWrapper = () => {
   const [desktopView] = useMediaQuery("(min-width: 992px)"); // Chakra lg breakpoint
   const { colorMode } = useColorMode();
   return (
-    <Box as="nav" aria-label="main-menu" height={"min-content"}>
+    <Box as="nav" aria-label="main-menu" height="min-content">
       {desktopView ? (
         <Navigation type="desktop" />
       ) : (
-        <Flex alignItems={"center"} columnGap={6} padding={8}>
+        <Flex alignItems="center" columnGap={6} padding={8}>
           <ColorModeToggle />
           <NavigationButton onClick={onOpen} isOpen={isOpen} />
         </Flex>
@@ -50,11 +50,11 @@ const NavigationWrapper = () => {
         </DrawerContent>
       </Drawer>
       <Box
-        position={"absolute"}
+        position="absolute"
         zIndex={-1}
-        right={"0%"}
-        height={"px"}
-        width={"100vw"}
+        right="0%"
+        height="px"
+        width="100vw"
         bg={`${colorMode}.textPrimary`}
       ></Box>
     </Box>

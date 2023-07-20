@@ -26,7 +26,7 @@ const NavigationItem = ({ link, text }: Props) => {
   const router = useRouter();
   const isActive = router.pathname === link;
   return (
-    <ListItem fontWeight={"normal"} fontSize={"2xl"}>
+    <ListItem fontWeight="normal" fontSize="2xl">
       <Link
         as={NextLink}
         href={link}

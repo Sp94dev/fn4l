@@ -34,7 +34,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Heading alignSelf={"flex-start"} mb={4} my="30px">
+      <Heading alignSelf="flex-start" mb={4} my="30px">
         Kim jesteśmy?
       </Heading>
       <Flex
@@ -70,7 +70,7 @@ const IndexPage = () => {
       </Flex>
 
       {currentPerson && (
-        <Flex flexDir={"column"} gap={"50px"} my={"50px"}>
+        <Flex flexDir="column" gap="50px" my="50px">
           <Link
             onClick={() => {
               router.push("/o-nas/", undefined, {

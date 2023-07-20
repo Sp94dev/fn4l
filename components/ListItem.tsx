@@ -18,7 +18,7 @@ const ListItem = ({ img, title, description, button }: ListItemProps) => (
       src={img.src}
       borderRadius="base"
     />
-    <Flex width={"100%"} direction="column" alignItems={"flex-start"} gap={2}>
+    <Flex width="100%" direction="column" alignItems="flex-start" gap={2}>
       <Text fontSize="lg">{title}</Text>
       <Text>{description}</Text>
       {button && (
@@ -27,10 +27,10 @@ const ListItem = ({ img, title, description, button }: ListItemProps) => (
           as={NextLink}
           paddingY={2}
           paddingX={6}
-          alignSelf={"flex-end"}
+          alignSelf="flex-end"
           backgroundColor="accent"
           textColor="black"
-          borderRadius={"base"}
+          borderRadius="base"
           _hover={{
             backgroundColor: "colors.lightGrey",
           }}

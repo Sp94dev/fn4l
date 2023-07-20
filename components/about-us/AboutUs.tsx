@@ -30,7 +30,7 @@ export const AboutUs = () => (
         temu pracowaliśmy w jednej z wrocławskich świetlic środowiskowych, w
         której gośćmi często były pieski. Zaobserwowaliśmy tam, że obecność
         czworonogów poprawia dzieciom i młodzieży samopoczucie oraz wpływa
-        pozytywnie na ich zachowanie.{" "}
+        pozytywnie na ich zachowanie.
       </Text>
       <Text as="p">
         Jako specjaliści (psychologowie) i właściciele zwierząt, zaczęliśmy
