@@ -1,56 +1,28 @@
-import { Box, Container, Flex } from "@chakra-ui/react";
-import { motion, useTransform } from "framer-motion";
+import { Box, Container, Flex, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
-import { useContext } from "react";
 
-import { colors } from "../../theme/colors";
 import Logo from "../Logo";
 import NavigationWrapper from "../navigation/NavigationWrapper";
-import { ScrollContext } from "./scrollContext/scrollContext";
-
-const setOpacity = (hex: string, alpha: number) =>
-  `${hex}${Math.floor(alpha * 255)
-    .toString(16)
-    .padStart(2, "0")}`;
 
 const Header = () => {
-  const { scrollYProgress } = useContext(ScrollContext);
-  const bgColor = useTransform(
-    scrollYProgress,
-    [0.7, 1],
-    [setOpacity(colors.accent, 0), colors.accent]
-  );
-
-  const textColor = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [colors.primaryText, colors.black]
-  );
-
+  const colorMode = useColorMode();
   return (
-    <Box
-      as={motion.div}
-      position={"fixed"}
-      display={"flex"}
-      alignItems={"center"}
-      width={"full"}
-      style={{ backgroundColor: bgColor, color: textColor }}
-    >
-      <Container
-        backgroundColor={{ base: "accent", lg: "transparent" }}
-        maxWidth={"container.xl"}
-      >
+    <Box display={"flex"} alignItems={"center"} width={"full"}>
+      <Container maxWidth={"container.xl"}>
         <Flex
           as="header"
           justifyContent={"space-between"}
-          alignItems={"center"}
-          height={{ base: 14, lg: "min-content" }}
+          alignItems={"top"}
+          height="min-content"
           gap={8}
           position={"relative"}
+          overflow={"hidden"}
         >
-          <Link href="/">
-            <Logo />
-          </Link>
+          <Box flexShrink={2} maxW={{ base: 40, lg: 80 }}>
+            <Link href="/">
+              <Logo />
+            </Link>
+          </Box>
 
           <NavigationWrapper />
         </Flex>

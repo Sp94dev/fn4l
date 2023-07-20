@@ -1,5 +1,6 @@
 import { List } from "@chakra-ui/react";
 
+import DarkModeToggle from "../header/DarkModeToggle";
 import NavigationItem from "./NaviationItem";
 
 interface Props {
@@ -14,25 +15,22 @@ const routes: { link: string; text: string }[] = [
   { link: "/oferta", text: "Oferta" },
 ];
 
-const Navigation = ({ type }: Props) => (
-  <List
-    display="flex"
-    gap={3}
-    whiteSpace={"nowrap"}
-    sx={
-      type === "mobile"
-        ? { flexDirection: "column" }
-        : {
-            flexDirection: "row",
-            padding: "8px 0",
-            fontSize: "18px",
-          }
-    }
-  >
-    {routes.map(({ link, text }) => (
-      <NavigationItem text={text} link={link} key={link} />
-    ))}
-  </List>
-);
+const Navigation = ({ type }: Props) => {
+  const desktopView = type === "desktop";
+
+  return (
+    <List
+      display="flex"
+      columnGap={4}
+      whiteSpace={"nowrap"}
+      flexDirection={!desktopView ? "column" : "row"}
+    >
+      {routes.map(({ link, text }) => (
+        <NavigationItem text={text} link={link} key={link} />
+      ))}
+      {desktopView && <DarkModeToggle />}
+    </List>
+  );
+};
 
 export default Navigation;

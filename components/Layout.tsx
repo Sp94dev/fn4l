@@ -2,7 +2,7 @@ import { Container } from "@chakra-ui/react";
 import Head from "next/head";
 import { ReactNode } from "react";
 
-import { HeaderWrapper } from "./header/HeaderWrapper";
+import Header from "./header/Header";
 
 type Props = {
   children?: ReactNode;
@@ -19,7 +19,7 @@ const Layout = ({
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1, width=device-width" />
     </Head>
-    <HeaderWrapper />
+    <Header />
     <Container px="8" maxW="full">
       <main>{children}</main>
     </Container>
