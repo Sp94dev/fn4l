@@ -1,6 +1,6 @@
 import { List } from "@chakra-ui/react";
 
-import DarkModeToggle from "../header/DarkModeToggle";
+import ColorModeToggle from "../header/ColorModeToggle";
 import NavigationItem from "./NaviationItem";
 
 interface Props {
@@ -30,7 +30,7 @@ const Navigation = ({ type }: Props) => {
       {routes.map(({ link, text }) => (
         <NavigationItem text={text} link={link} key={link} />
       ))}
-      {desktopView && <DarkModeToggle />}
+      {desktopView && <ColorModeToggle />}
     </List>
   );
 };

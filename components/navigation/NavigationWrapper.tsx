@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-import DarkModeToggle from "../header/DarkModeToggle";
+import ColorModeToggle from "../header/ColorModeToggle";
 import Navigation from "./Navigation";
 import NavigationButton from "./NavigationButton";
 
@@ -30,7 +30,7 @@ const NavigationWrapper = () => {
         <Navigation type="desktop" />
       ) : (
         <Flex alignItems={"center"} columnGap={6} padding={8}>
-          <DarkModeToggle />
+          <ColorModeToggle />
           <NavigationButton onClick={onOpen} isOpen={isOpen} />
         </Flex>
       )}

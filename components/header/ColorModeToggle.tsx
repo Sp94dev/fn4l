@@ -2,7 +2,7 @@ import { Box, useColorMode } from "@chakra-ui/react";
 
 import { colors } from "../../theme/colors";
 
-const DarkModeToggle = () => {
+const ColorModeToggle = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Box as="button" onClick={toggleColorMode}>
@@ -22,4 +22,4 @@ const DarkModeToggle = () => {
   );
 };
 
-export default DarkModeToggle;
+export default ColorModeToggle;
