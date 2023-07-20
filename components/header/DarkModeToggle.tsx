@@ -5,7 +5,7 @@ import { colors } from "../../theme/colors";
 const DarkModeToggle = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Box onClick={toggleColorMode}>
+    <Box as="button" onClick={toggleColorMode}>
       <svg
         width="30"
         height="30"

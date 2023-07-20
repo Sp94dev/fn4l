@@ -22,10 +22,10 @@ const Navigation = ({ type }: Props) => {
     <List
       padding={8}
       display="flex"
-      alignItems={"center"}
+      alignItems={desktopView ? "center" : "start"}
       columnGap={4}
       whiteSpace={"nowrap"}
-      flexDirection={!desktopView ? "column" : "row"}
+      flexDirection={desktopView ? "row" : "column"}
     >
       {routes.map(({ link, text }) => (
         <NavigationItem text={text} link={link} key={link} />
