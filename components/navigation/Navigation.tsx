@@ -20,7 +20,9 @@ const Navigation = ({ type }: Props) => {
 
   return (
     <List
+      padding={8}
       display="flex"
+      alignItems={"center"}
       columnGap={4}
       whiteSpace={"nowrap"}
       flexDirection={!desktopView ? "column" : "row"}

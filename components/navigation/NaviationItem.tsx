@@ -26,17 +26,13 @@ const NavigationItem = ({ link, text }: Props) => {
   const router = useRouter();
   const isActive = router.pathname === link;
   return (
-    <ListItem
-      fontWeight={"normal"}
-      mb={2}
-      fontSize={"2xl"}
-      textUnderlineOffset={10}
-    >
+    <ListItem fontWeight={"normal"} fontSize={"2xl"}>
       <Link
         as={NextLink}
         href={link}
         aria-current={isActive}
         className={isActive && "active"}
+        textUnderlineOffset={10}
         _hover={{
           textDecoration: "underline",
           textDecorationColor: "accent",
