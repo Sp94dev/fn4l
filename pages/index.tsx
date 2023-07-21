@@ -5,6 +5,7 @@ import { AboutUs } from "../components/sections/AboutUs";
 import { ImageDivider } from "../components/sections/ImageDivider";
 import { OurActions } from "../components/sections/OurActions";
 import { OurOffer } from "../components/sections/OurOffer";
+import { Stats } from "../components/sections/Stats";
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +14,7 @@ const IndexPage = () => (
       <OurOffer />
       <OurActions />
       <ImageDivider />
+      <Stats />
     </Flex>
   </Layout>
 );
