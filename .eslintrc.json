@@ -3,6 +3,13 @@
   "plugins": ["simple-import-sort", "unused-imports"],
   "rules": {
     "react/jsx-curly-brace-presence": [1, "never"],
+    "react/self-closing-comp": [
+      "warn",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
       "warn",
