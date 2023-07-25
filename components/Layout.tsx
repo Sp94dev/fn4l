@@ -2,7 +2,7 @@ import { Container } from "@chakra-ui/react";
 import Head from "next/head";
 import { ReactNode } from "react";
 
-import Header from "./sections/header/Header";
+import Header from "../sections/header/Header";
 
 type Props = {
   children?: ReactNode;

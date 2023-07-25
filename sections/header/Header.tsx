@@ -1,7 +1,7 @@
 import { Box, Container, Flex } from "@chakra-ui/react";
 import Link from "next/link";
 
-import Logo from "../../Logo";
+import Logo from "../../components/Logo";
 import NavigationWrapper from "./navigation/NavigationWrapper";
 
 const Header = () => (

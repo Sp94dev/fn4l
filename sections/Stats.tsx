@@ -1,6 +1,6 @@
 import { Flex, Text } from "@chakra-ui/react";
 
-import { Counter } from "../Counter";
+import { Counter } from "../components/Counter";
 
 const statistics = [
   {

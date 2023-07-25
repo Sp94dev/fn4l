@@ -1,6 +1,6 @@
 import { Flex, Grid, Heading, Text } from "@chakra-ui/react";
 
-import { CardTall } from "../CardTall";
+import { CardTall } from "../components/CardTall";
 
 interface Action {
   name: string;
