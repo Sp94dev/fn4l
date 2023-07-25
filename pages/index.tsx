@@ -1,12 +1,12 @@
 import { Flex } from "@chakra-ui/react";
 
+import { AboutUs } from "../components/Home/AboutUs";
+import Footer from "../components/Home/Footer";
+import { ImageDivider } from "../components/Home/ImageDivider";
+import { OurActions } from "../components/Home/OurActions";
+import { OurOffer } from "../components/Home/OurOffer";
+import { Stats } from "../components/Home/Stats";
 import Layout from "../components/Layout";
-import { AboutUs } from "../sections/AboutUs";
-import Footer from "../sections/Footer";
-import { ImageDivider } from "../sections/ImageDivider";
-import { OurActions } from "../sections/OurActions";
-import { OurOffer } from "../sections/OurOffer";
-import { Stats } from "../sections/Stats";
 
 const IndexPage = () => (
   <Layout>
