@@ -46,12 +46,12 @@ const Richtext2 = () => (
 
 const SocialLinks = [
   {
-    src: "/images/socialIcons/facebook.svg",
+    src: "/socialIcons/facebook.svg",
     alt: "facebook icon",
     href: "https://www.facebook.com/Terapeutana4lapach/",
   },
   {
-    src: "/images/socialIcons/youtube.svg",
+    src: "/socialIcons/youtube.svg",
     alt: "facebook icon",
     href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
@@ -78,7 +78,7 @@ const Footer = () => (
             <Image
               width="full"
               maxWidth="380px"
-              src="/images/logo_color.svg"
+              src="/logos/logo_color.svg"
               alt="Logo Fundacji na 4 Łapach"
             />
           </GridItem>
