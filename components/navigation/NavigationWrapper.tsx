@@ -56,7 +56,7 @@ const NavigationWrapper = () => {
         height="px"
         width="100vw"
         bg={`${colorMode}.textPrimary`}
-      ></Box>
+      />
     </Box>
   );
 };
