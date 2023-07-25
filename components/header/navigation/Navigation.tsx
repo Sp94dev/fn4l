@@ -1,6 +1,6 @@
 import { List } from "@chakra-ui/react";
 
-import ColorModeToggle from "../header/ColorModeToggle";
+import ColorModeToggle from "../ColorModeToggle";
 import NavigationItem from "./NaviationItem";
 
 interface Props {

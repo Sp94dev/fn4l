@@ -20,7 +20,7 @@ export const CardTall = ({ img, title }: CardTallProps) => (
       as="h3"
       size="md"
       textAlign="center"
-      color="primaryText"
+      color="textPrimary"
       px={{ base: "unset", lg: 7 }}
     >
       {title}

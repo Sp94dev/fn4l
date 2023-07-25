@@ -69,7 +69,7 @@ const Footer = () => (
         <Grid
           flexDir="column"
           gap={6}
-          textColor="primaryText"
+          textColor="textPrimary"
           templateRows={{ md: "repeat(3, auto)", base: "auto" }}
           templateColumns={{ md: "auto", base: "1fr" }}
           gridAutoFlow={{ base: "row", md: "column" }}

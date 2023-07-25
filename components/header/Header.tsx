@@ -2,7 +2,7 @@ import { Box, Container, Flex } from "@chakra-ui/react";
 import Link from "next/link";
 
 import Logo from "../Logo";
-import NavigationWrapper from "../navigation/NavigationWrapper";
+import NavigationWrapper from "./navigation/NavigationWrapper";
 
 const Header = () => (
   <Flex alignItems="center" width="full">

@@ -47,11 +47,11 @@ export const Stats = () => (
             fontSize="7xl"
             fontFamily="Open Sans Condensed"
             fontWeight="bold"
-            color="secondaryText"
+            color="textSecondary"
           >
             <Counter from={0} to={amount} />+
           </Text>
-          <Text color="secondaryText">{text}</Text>
+          <Text color="textSecondary">{text}</Text>
         </Flex>
       ))}
     </Flex>
