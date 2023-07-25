@@ -14,7 +14,7 @@ const Copyright = () => (
         </p>
         <Image
           alt="Developed by OpenTech, SoftServe"
-          src="images/OpenTechLogo.svg"
+          src="/logos/OpenTechLogo.svg"
           maxWidth="270px"
         />
       </Flex>

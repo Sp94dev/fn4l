@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-import ColorModeToggle from "../header/ColorModeToggle";
+import ColorModeToggle from "../ColorModeToggle";
 import Navigation from "./Navigation";
 import NavigationButton from "./NavigationButton";
 
