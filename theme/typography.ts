@@ -1,5 +1,5 @@
 export const fonts = {
-  body: "Roboto, pen sans, sans-serif",
+  body: "open sans, sans-serif",
   heading: "Open Sans Condensed, Open sans, sans-serif",
 };
 
