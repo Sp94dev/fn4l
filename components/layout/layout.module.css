@@ -1,9 +1,0 @@
-.container {
-	height: 100vh;
-	overflow-y: scroll;
-	display: grid;
-	grid-template:
-		'header'
-		'content'
-		'footer';
-}

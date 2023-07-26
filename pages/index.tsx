@@ -1,41 +1,24 @@
-import Image from 'next/image';
-import Layout from '../components/layout/Layout';
-import styles from './index.module.css';
-import { Box, Flex, Heading } from '@chakra-ui/react';
+import { Flex } from "@chakra-ui/react";
 
-const IndexPage = () => {
-	return (
-		<Layout>
-			<Flex
-				as='section'
-				flexDirection={'column'}
-				alignItems={'center'}
-			>
-				<Image
-					className={styles.image}
-					priority
-					width='250'
-					height='315'
-					alt='Wesoły pies'
-					src='/images/standing-dog-1.png'
-					sizes='contain'
-				/>
-				<Heading
-					className={styles.title}
-					alignSelf={'flex-start'}
-					mb={4}
-				>
-					Kim jesteśmy?
-				</Heading>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing
-					elit. Etiam non augue quis enim lobortis ultrices.
-					Aenean tempor mollis massa eget fringilla. Duis
-					cursus elit eget pretium dignissim.{' '}
-				</p>
-			</Flex>
-		</Layout>
-	);
-};
+import { AboutUs } from "../components/Home/AboutUs";
+import Footer from "../components/Home/Footer";
+import { ImageDivider } from "../components/Home/ImageDivider";
+import { OurActions } from "../components/Home/OurActions";
+import { OurOffer } from "../components/Home/OurOffer";
+import { Stats } from "../components/Home/Stats";
+import Layout from "../components/Layout";
+
+const IndexPage = () => (
+  <Layout>
+    <Flex direction="column" gap="32">
+      <AboutUs />
+      <OurOffer />
+      <OurActions />
+      <ImageDivider />
+      <Stats />
+      <Footer />
+    </Flex>
+  </Layout>
+);
 
 export default IndexPage;
